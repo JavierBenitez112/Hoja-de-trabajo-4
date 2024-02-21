@@ -20,11 +20,9 @@ public class Factory {
             case 1:
                 return new MyStack<Integer>(); // Implementación con Vector
             case 2:
-                 // Implementación con ArrayList
-            case 3:
-                
+                return new ListaSimpleImplementacion<Integer>(); // Implementación con Lista Simple
             default:
-                throw new IllegalArgumentException("Seleccion Invalida, Ingrese si desea usar la opcion 1,2 o 3.");
+                throw new IllegalArgumentException("Selección inválida. Por favor, elija 1 para Vector o 2 para Lista Simple.");
         }
     }
 
