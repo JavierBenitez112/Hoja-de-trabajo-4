@@ -17,9 +17,9 @@ public class Factory {
     public static UVGStack<Integer> createStack(int choice) {
         switch (choice) {
             case 1:
-                return new MyStack<Integer>(); // Implementación con ArrayList
+                return new MyStack<Integer>(); // Implementación con Vector
             case 2:
-                 // Implementación con Vector
+                 // Implementación con ArrayList
             case 3:
                  // Implementación con Lista
             default:
@@ -40,11 +40,5 @@ public class Factory {
                 stack.push(Character.getNumericValue(ch));
             }
         }
-    }
-
-    public static void main(String[] args) {
-        String infixExpression = "(1+2)*9";
-        UVGStack<Integer> stack = createStack(1); // Cambia el número para seleccionar la implementación deseada
-        convertAndPushToStack(infixExpression, stack);
     }
 }
