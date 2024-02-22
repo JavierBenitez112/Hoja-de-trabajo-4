@@ -1,9 +1,11 @@
 package Pilas;
 
-public class ListaSimpleImplementacion <G> implements UVGList<G> {
-    private Node<G> head;
+import Interfaces.UVGList;
 
-    private static class Node<G> {
+public class ListaSimpleImplementacion<G> implements UVGList<G> {
+    public Node<G> head; // Cambio de visibilidad a public
+
+    public static class Node<G> { // Cambio de visibilidad a public
         G data;
         Node<G> next;
 
@@ -49,4 +51,5 @@ public class ListaSimpleImplementacion <G> implements UVGList<G> {
     public boolean isEmpty() {
         return head == null;
     }
+    
 }

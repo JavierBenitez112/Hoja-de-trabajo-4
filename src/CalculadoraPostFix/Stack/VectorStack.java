@@ -2,7 +2,7 @@ package Stack;
 
 import java.util.Vector;
 
-public class VectorStack<G> implements UVGStack<G> {
+public class VectorStack<G> implements DynamicStack<G> {
     private Vector<G> stack;
 
     public VectorStack() {
@@ -23,7 +23,7 @@ public class VectorStack<G> implements UVGStack<G> {
     }
 
     @Override
-    public G Top() {
+    public G top() {
         if (isEmpty()) {
             throw new IllegalStateException("Stack is empty");
         }
@@ -35,4 +35,3 @@ public class VectorStack<G> implements UVGStack<G> {
         return stack.isEmpty();
     }
 }
-

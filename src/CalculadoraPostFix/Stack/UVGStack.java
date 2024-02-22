@@ -1,7 +1,7 @@
 package Stack;
 
 /**
- * define el método básico
+ * Define el método básico
  *
  * @param <G> el tipo de elementos que se guardaran
  */
@@ -12,26 +12,26 @@ public interface UVGStack<G> {
      *
      * @param item elemento que se agrega
      */
-    public void push(G item);
+    void push(G item);
 
     /**
      * Elimina y devuelve el elemento en la cima
      *
      * @return elemento que estaba en la cima
      */
-    public G pop();
+    G pop();
 
     /**
      * Obtiene el elemento en la cima
      *
-     * @return El elemento en la cima
+     * @return el elemento en la cima
      */
-    public G Top();
+    G top();
 
     /**
      * Verifica si está vacía.
      *
      * @return true si la pila está vacía, false si no.
      */
-    public boolean isEmpty();
+    boolean isEmpty();
 }

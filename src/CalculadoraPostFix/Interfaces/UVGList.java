@@ -1,4 +1,4 @@
-package Pilas;
+package Interfaces;
 
 public interface UVGList<G> {
     void add(G item);

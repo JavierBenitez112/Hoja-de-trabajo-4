@@ -2,7 +2,6 @@ package Conversor;
 
 import java.util.Stack;
 
-
 /**
  * Clase para convertir expresiones infix a postfix
  */

@@ -1,6 +1,6 @@
 package Operations;
 
-import Stack.MyStack;
+import Stack.DynamicStack;
 
 /**
  * Operaciones de evaluación
@@ -9,14 +9,14 @@ public class OperationManager {
 
     /**
      * Postfix
-     * 
+     *
      * @param stack se realizan y almacenan las operaciones
      * @param item Representa la operación
-     * 
+     *
      * @throws ArithmeticException se divide por cero
      * @throws IllegalArgumentException el caracter no es valido
      */
-    public static void OperationPostFix(MyStack<Integer> stack, Character item) {
+    public static void OperationPostFix(DynamicStack<Integer> stack, Character item) {
         String allUseCharacters = "+-*/0123456789";
 
         int result = 0;
@@ -28,7 +28,9 @@ public class OperationManager {
                     stack.push(result);
                     break;
                 case '-':
-                    result = stack.pop() - Character.getNumericValue(stack.pop());
+                    int operand2 = stack.pop();
+                    int operand1 = stack.pop();
+                    result = operand1 - operand2;
                     stack.push(result);
                     break;
                 case '*':
@@ -38,7 +40,8 @@ public class OperationManager {
                 case '/':
                     int divisor = stack.pop();
                     if (divisor != 0) {
-                        result = stack.pop() / divisor;
+                        int dividend = stack.pop();
+                        result = dividend / divisor;
                         stack.push(result);
                     } else {
                         throw new ArithmeticException("División por cero en la expresión.");
@@ -47,7 +50,9 @@ public class OperationManager {
                 case ' ':
                     break;
                 default:
-                    stack.push(Character.getNumericValue(item));
+                    // Convertir el carácter numérico en un valor entero
+                    int operand = Character.getNumericValue(item);
+                    stack.push(operand);
                     break;
             }
         } else {
