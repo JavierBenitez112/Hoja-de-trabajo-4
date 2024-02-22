@@ -18,11 +18,13 @@ public class Factory {
     public static UVGStack<Integer> createStack(int choice) {
         switch (choice) {
             case 1:
-                return new MyStack<Integer>(); // Implementación con Vector
+                return new MyStack<>(); // Implementación con Vector
             case 2:
-                return new ListaSimpleImplementacion<Integer>(); // Implementación con Lista Simple
+                return new ArrayListStack<>(); // Implementación con ArrayList
+            case 3:
+                return new ListaSimpleImplementacion<>(); // Implementación con Lista
             default:
-                throw new IllegalArgumentException("Selección inválida. Por favor, elija 1 para Vector o 2 para Lista Simple.");
+                throw new IllegalArgumentException("Selección inválida, ingrese 1, 2 o 3.");
         }
     }
 
