@@ -1,4 +1,4 @@
-package TxtReader;
+package com.TxtReader;
 
 import java.io.BufferedReader;
 import java.io.FileReader;

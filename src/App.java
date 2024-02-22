@@ -1,3 +1,5 @@
+package com;
+
 import Conversor.Factory;
 import Conversor.InfixToPostfix;
 import Operations.OperationManager;

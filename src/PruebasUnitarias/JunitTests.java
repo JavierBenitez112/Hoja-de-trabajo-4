@@ -1,11 +1,11 @@
-package PruebasUnitarias;
+package com.PruebasUnitarias;
 import static org.junit.Assert.assertEquals;
 import static org.junit.Assert.assertFalse;
 import static org.junit.Assert.assertTrue;
 
 import org.junit.Test;
 
-import Stack.DynamicStack;
+import Stack.DynamicSt;
 import Conversor.Factory;
 import Conversor.InfixToPostfix;
 
@@ -19,7 +19,7 @@ public class JunitTests {
     
         @Test
         public void testArrayListStack() {
-            DynamicStack<Integer> stack = Factory.createStack(1); // Crear ArrayListStack
+            DynamicSt<Integer> stack = Factory.createStack(1); // Crear ArrayListStack
             assertTrue(stack.isEmpty()); // Verificar que la pila está vacía al principio
     
             stack.push(1);
@@ -33,7 +33,7 @@ public class JunitTests {
     
         @Test
         public void testVectorStack() {
-            DynamicStack<Integer> stack = Factory.createStack(2); // Crear VectorStack
+            DynamicSt<Integer> stack = Factory.createStack(2); // Crear VectorStack
             assertTrue(stack.isEmpty()); // Verificar que la pila está vacía al principio
     
             stack.push(1);
@@ -47,7 +47,7 @@ public class JunitTests {
     
         @Test
         public void testLinkedListStack() {
-            DynamicStack<Integer> stack = Factory.createStack(3); // Crear ListaEnlazadaStack
+            DynamicSt<Integer> stack = Factory.createStack(3); // Crear ListaEnlazadaStack
             assertTrue(stack.isEmpty()); // Verificar que la pila está vacía al principio
     
             stack.push(1);

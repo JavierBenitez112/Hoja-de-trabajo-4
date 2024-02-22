@@ -1,4 +1,4 @@
-package Stack;
+package com.Stack;
 
 /**
  * Define el método básico

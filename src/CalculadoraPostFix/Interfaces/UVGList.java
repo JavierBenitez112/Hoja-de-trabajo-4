@@ -1,4 +1,4 @@
-package Interfaces;
+package com.Interfaces;
 
 public interface UVGList<G> {
     void add(G item);

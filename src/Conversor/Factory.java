@@ -1,7 +1,7 @@
-package Conversor;
+package com.Conversor;
 
 import Stack.ArrayListStack;
-import Stack.DynamicStack;
+import Stack.DynamicSt;
 import Stack.ListaEnlazadaStack;
 import Stack.VectorStack;
 
@@ -14,7 +14,7 @@ public class Factory {
      *               1 para ArrayList, 2 para Vector, 3 para Lista enlazada simple
      * @return Instancia de DynamicStack con la implementación seleccionada
      */
-    public static <T> DynamicStack<T> createStack(int choice) {
+    public static <T> DynamicSt<T> createStack(int choice) {
         switch (choice) {
             case 1:
                 return new ArrayListStack<>();
