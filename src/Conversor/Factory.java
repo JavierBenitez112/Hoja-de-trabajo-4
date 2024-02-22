@@ -18,7 +18,7 @@ public class Factory {
     public static UVGStack<Integer> createStack(int choice) {
         switch (choice) {
             case 1:
-                return new MyStack<>(); // Implementación con Vector
+                return new VectorStack<>(); // Implementación con Vector
             case 2:
                 return new ArrayListStack<>(); // Implementación con ArrayList
             case 3:
